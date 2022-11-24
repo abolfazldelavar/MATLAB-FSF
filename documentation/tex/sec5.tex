@@ -1,0 +1,58 @@
+\section*{Exercise 5}
+The simulation of Example 2-13 \footnote{K. J. Astrom and B. Wittenmark, Adaptive Control, Addison-Wesley, 2nd edition, 1995} showed in \mref{fig:8}{Fig }.
+Also Example 2-14 showed in \mref{fig:9}{Fig } and \mref{fig:10}{Fig }.
+\begin{figure}[h!]
+    \centering{
+        \begin{subfigure}{1\linewidth}
+            \centering
+            \includegraphics[width=0.6\linewidth,page=18,trim=0 10 0 0,clip=true]{img/plots}
+            \caption{$\varphi^T(t)=[-y(t-1), u(t-1)]$}
+            \label{fig:8.a}
+        \end{subfigure}\\
+        \begin{subfigure}{1\linewidth}
+            \centering
+            \includegraphics[width=0.6\linewidth,page=19,trim=0 10 0 0,clip=true]{img/plots}
+            \caption{$\varphi^T(t)=[-y(t-1), u(t-1), \varepsilon(t-1)]$}
+            \label{fig:8.b}
+        \end{subfigure}
+        \caption{Extended least square Example 2-13.}
+        \label{fig:8}
+    }
+\end{figure}
+\begin{figure}[h!]
+    \centering{
+        \begin{subfigure}{1\linewidth}
+            \centering
+            \includegraphics[width=0.6\linewidth,page=20,trim=0 10 0 0,clip=true]{img/plots}
+            \caption{$u(t)=-0.2y(t)$}
+            \label{fig:9.a}
+        \end{subfigure}\\
+        \begin{subfigure}{1\linewidth}
+            \centering
+            \includegraphics[width=0.6\linewidth,page=21,trim=0 10 0 0,clip=true]{img/plots}
+            \caption{$u(t)=-0.32y(t-1)$}
+            \label{fig:9.b}
+        \end{subfigure}
+        \caption{Close-loop stimation parameters - Example 2-14.}
+        \label{fig:9}
+    }
+\end{figure}
+\begin{figure}[h!]
+    \centering{
+        \begin{subfigure}{1\linewidth}
+            \centering
+            \includegraphics[width=0.6\linewidth,page=22,trim=0 10 0 0,clip=true]{img/plots}
+            \caption{$u(t)=-0.2y(t)$}
+            \label{fig:10.a}
+        \end{subfigure}\\
+        \begin{subfigure}{1\linewidth}
+            \centering
+            \includegraphics[width=0.6\linewidth,page=23,trim=0 10 0 0,clip=true]{img/plots}
+            \caption{$u(t)=-0.32y(t-1)$}
+            \label{fig:10.b}
+        \end{subfigure}
+        \caption{Phase plane for Close-loop stimation parameters - Example 2-14.}
+        \label{fig:10}
+    }
+\end{figure}\\
+According to \mref{fig:10}{Fig }, we find that the estimator has a bias and the parameters remain at a distance from the answer. Note that, the simulation was performed with $20,000$ samples.

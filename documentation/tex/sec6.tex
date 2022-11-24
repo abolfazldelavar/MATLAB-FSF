@@ -1,0 +1,47 @@
+\section*{Exercise 6}
+We want estimating the parameters of the system
+\begin{align} \label{eq.33}
+    y(t) + a_1y(t-1) + a_2y(t-2)=b_0u(t-1)+b_1u(t-2) +e(t).
+\end{align}
+\paragraph{a)} If the system is controlled by controller
+\begin{align} \label{eq.34}
+    u(t-1)+r_1u(t-2)=-s_0y(t-1)-s_1y(t-2)
+\end{align}
+The close-loop difference equation is calculated as the following:\\
+From \mref{eq.33}{Eq } and \mref{eq.34}{Eq }
+\begin{align*}
+    (1+a_1q^{-1}+a_2q^{-2})y(t) &= (b_0q^{-1}+b_1q^{-2})u(t) + e(t)\\
+    (-s_0-s_1q^{-1})y(t) &= (1+r_1q^{-1})u(t)
+\end{align*}
+therefore,
+\begin{align*}
+    \left[(1+a_1q^{-1}+a_2q^{-2})(1+r_1q^{-1})\right.& \\
+    \left. - (b_0q^{-1}+b_1q^{-2})(-s_0-s_1q^{-1})\right]y(t) &= (1+r_1q^{-1})e(t)\\
+\end{align*}
+therefore,
+\begin{align} \label{eq.35}
+    (1 + K_1q^{-1} + K_2q^{-2} &+ K_3q^{-3})y(t) = (1+r_1q^{-1})e(t)\\
+    K_1 &= a_1 + r_1 -s_0b_0\nonumber\\
+    K_2 &= a_2 + a_1r_1 + s_0b_1 + s_1b_0\nonumber\\
+    K_3 &= r_1a_2 + s_1b_1.\nonumber
+\end{align}
+According to \mref{eq.35}{Eq }, we have 3 estimated coefficients ($K_i$), but we want estimating 4 unknown parameters ($a_i, b_i$), hence we can not estimating unique parameters.
+\paragraph{b)} According to \mref{eq.35}{Eq }, just we can estimate $K_i$.
+\paragraph{c)} Now assume that the controller is
+\begin{align}
+    u(t) + r_1u(t-1) + r_2u(t-2)= -s_0y(t) -s_1y(t-1)-s_2y(t-2)
+\end{align}
+hence, as before
+\begin{align*}
+    (1+a_1q^{-1}+a_2q^{-2})y(t) &= (b_0q^{-1}+b_1q^{-2})u(t) + e(t)\\
+    (-s_0-s_1q^{-1} - s_2q^{-2})y(t) &= (1+r_1q^{-1}+r_2q^{-2})u(t)
+\end{align*}
+therefore,
+\begin{align}
+    (1 + L_1q^{-1} + L_2q^{-2} + L_3q^{-3} &+ L_4q^{-4})y(t) = (1 + r_1q^{-1} + r_2q^{-2})e(t)\\
+    L_1 &= a_1 + r_1 + s_0b_0 \nonumber\\
+    L_2 &= a_2 + r_1a_1 + r_2 + s_0b_1 + s_1b_0\nonumber\\
+    L_3 &= a_2r_1 + a_1r_2 + s_1b_1 + s_2b_0\nonumber\\
+    L_4 &= a_2r_2 + s_2b_1. \nonumber
+\end{align}
+Now we have 4 equations and 4 unknown parameters, therefore we can calculate unique parameters.

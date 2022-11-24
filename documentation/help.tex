@@ -1,0 +1,81 @@
+%%!TEX encoding = UTF-8 Unicode
+\documentclass[11pt, letterpaper, onecolumn, english, notitlepage]{book}
+
+\usepackage[left=1.5in, right=1.5in, top=1.5in, bottom=1.5in]{geometry}
+\usepackage[cc]{titlepic}
+\usepackage{amsmath, graphicx, hyperref, subcaption, amssymb, amsthm}
+\usepackage[none]{hyphenat}
+\usepackage{geometry}
+\usepackage{xspace}
+\usepackage{epstopdf}
+%\usepackage[frenchb]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\linespread{1}
+\hypersetup{colorlinks=false, linkbordercolor={1 1 1}, citebordercolor={1 1 1}, urlbordercolor={1 1 1}}
+
+\newcommand{\mref}[2]{\hyperref[#1]{#2\ref*{#1}}}
+\newcommand{\emref}[2]{\hyperref[#1]{#2(\ref*{#1})}}
+%\newtheorem{Lemma}{Lemma}
+%\newtheorem*{solution}{Solution}
+
+\begin{document}
+
+    \begin{titlepage}
+        \begin{center}
+            \title{Documentation of the MATLAB and \LaTeX{} framework (Faryadell)}
+            \author{
+                \textbf{Abolfazl Delavar}\\
+                \\
+                Version \textbf{1.0.0}\\
+                \\
+                Control Engineering \& Computational Neuroscience\\
+                \href{http://abolfazldelavar.com}{http://abolfazldelavar.com}\\
+                \href{mailto:faryadell@gmail.com}{faryadell@gmail.com}
+            }
+            \date{\today}
+            \includegraphics[width=0.4\linewidth,trim=2 2 2 2,clip=true]{img/framework.png}
+        \end{center}
+
+    \end{titlepage}
+
+    \maketitle
+
+    \newpage
+
+    \tableofcontents
+
+    
+    \vspace{2.5cm}
+    \chapter{Introduction} {
+        \newpage
+        \input{tex/introduction}
+    }
+
+    \newpage
+    \chapter{Object Oriented Programming (OOP)} {
+        \newpage
+        \input{tex/oop}
+    }
+
+    \newpage
+    \chapter{Fundamental of Dynamical Systems} {
+        \newpage
+        \input{tex/dynamicalsystems}
+    }
+
+    \newpage
+    \chapter{MATLAB framework} {
+        \newpage
+        \input{tex/matlab}
+    }
+
+    \newpage
+    \chapter{A Summary of The \LaTeX{} Framework} {
+        \newpage
+
+    }
+
+\end{document}

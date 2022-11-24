@@ -1,0 +1,42 @@
+\section{Ordinary Differential Equations (ODEs)} {
+    \subsection{Linear Time Invariant (LTI)} {
+        \subsubsection*{LTI systems without input delay} {
+            
+        }
+        \subsubsection*{LTI systems with delayed inputs} {
+
+        }
+
+    }
+    \subsection{Nonlinear ODEs without input delay} {
+
+    }
+    \subsection{Nonlinear ODEs with delayed inputs} {
+
+    }
+}
+\section{Partial Differential Equations (PDEs)} {
+
+}
+\section{Examples} {
+
+}
+For estimation the parameters, using the `ARX' command in MATLAB, we achieve the \mref{tab.est}{Table }.
+Model 4 is better than other models, because MSE is small and Fit percent is bigger than others.
+But why model 5 is not good? It is not a good model because $a_2\simeq 0$ and there is not much difference between model 4 and model 5.
+therefore model 4 with fewer poles is a good select for Representation system.
+\begin{table}[h!]
+    \begin{center}
+        \caption{Estimated Parameters with LS method}
+        \label{tab.est}
+        \begin{tabular}{c|c|c|c|c|c|c}
+            Model &  $a_1$ & $a_2$ & $b_1$ & $b_2$ & MSE & Fit(\%)\\
+            \hline
+            1 & - & - & $0.9078$ & $-0.9212$ & $0.3727$ & $58.87$ \\
+            2 & $-0.7390$ & - & $0.8832$ & - & $0.1705$ & $72.18$\\
+            3 & $-0.9856$ & $-0.3485$ & $0.9315$ & - & $0.04384$ & $85.89$\\
+            4 & $-0.5229$ & - & $0.9033$ & $-0.4809$ & $0.003321$ & $96.12$\\
+            5 & $-0.525$ & $-0.001746$ & $0.9035$ & $-0.479$ & $0.00332$ & $96.12$\\
+        \end{tabular}
+    \end{center}
+\end{table}

@@ -1,0 +1,26 @@
+\paragraph{a)} {
+We have
+    \begin{equation*}
+        s(i)=\frac{t^2(i)}{2}.g
+    \end{equation*}
+such that
+    \begin{equation*}
+        \theta = g \quad \& \quad \varphi^T(i)=\frac{t^2(i)}{2}
+    \end{equation*}
+Also the Least Squares problem is
+    \begin{equation} \label{eq.2}
+        \hat{\theta}(i) = \left(\sum_{j=1}^{i}\varphi(j)\varphi^T(j)\right)^{-1}\left(\sum_{j=1}^{i}\varphi(j)y(j)\right).
+    \end{equation}
+for find $g$, assume that $s(i)=[0,5,19.5,44]$ and $t(i)=[0,1,2,3]$ for $i=[1,2,3,4]$. therefor
+\begin{align}
+    P(4) = \left(\sum_{i=1}^{4}\left(\frac{t^2(i)}{2}\right)^2\right)^{-1} &= 0.0408\nonumber\\
+    g_1=\hat{\theta}_1(i=4)= P(4)\left(\sum_{j=1}^{4}\left(\frac{t^2(j)}{2}\right)s(j)\right) &= 9.7755.
+\end{align}
+}
+\paragraph{b)} {
+    Recurcive Least Squares for calculate one forward step with new point $s(5)=78.5$ and $t(5)=4$:
+    \begin{align}
+        P(5) = \left(P^{-1}(4) + \varphi(5)\varphi^T(5)\right)^{-1} &= 0.0156\nonumber\\
+        g_2 = \hat{\theta}_2(5) = \hat{\theta}_1(4) + P(5)\varphi(5)\left(s(5) - \varphi^T(5)\hat{\theta}_1(4)\right) &= 9.8125.
+    \end{align}
+}

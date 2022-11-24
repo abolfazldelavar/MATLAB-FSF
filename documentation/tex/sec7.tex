@@ -1,0 +1,46 @@
+\section*{Exercise 7}
+\begin{proof}
+    
+We know
+\begin{align}
+    \hat{\theta} = R^{-1}(t)\int_0^t e^{-\alpha(t-\tau)}\varphi(\tau)y(\tau)\:\mathrm{d}\tau
+\end{align}
+with
+\begin{align*}
+    R^{-1}(t) = \int_0^t e^{-\alpha(t-\tau)}\varphi(\tau)\varphi^T(\tau)\:\mathrm{d}\tau
+\end{align*}
+is optimal answer the equation
+\begin{align}
+    V(\theta) = \int_0^t e^{-\alpha(t-\tau)}(y(\tau) - \varphi^T(\tau)\theta)^2\:\mathrm{d}\tau .
+\end{align}
+Also, know that
+\begin{align}
+    P(t) &= R^{-1}(t) \label{eq.7.1}\\
+    \frac{\mathrm{d}P(t)}{\mathrm{d}t} &= -P(t)\left(\frac{\mathrm{d}R(t)}{\mathrm{d}t}\right)P(t) \label{eq.7.2}\\
+    \frac{\mathrm{d}R(t)}{\mathrm{d}t} &= \varphi\varphi^T -\alpha R(t) \label{eq.7.3}.
+\end{align}
+By merging two equations \mref{eq.7.2}{Eq } and \mref{eq.7.3}{Eq }, One of the equations is easily obtained
+\begin{align}
+    \frac{\mathrm{d}P(t)}{\mathrm{d}t} &= -P(t)\left(\varphi\varphi^T -\alpha R(t)\right)P(t) \nonumber\\
+    &= \alpha P(t) - P(t)\varphi(t)\varphi^T(t)P(t) \label{eq.7.4}.
+\end{align}
+Also, The derivative of $\hat{\theta}$ into time, is obtained as follows:
+\begin{align}
+    \frac{\mathrm{d}\hat{\theta}}{\mathrm{d}t} &= \frac{\mathrm{d}P(t)}{\mathrm{d}t}\int_0^t e^{-\alpha(t-\tau)}\varphi(\tau)y(\tau)\:\mathrm{d}\tau \nonumber\\
+    &+ P(t)\left(-\alpha\int_0^t e^{-\alpha(t-\tau)}\varphi(\tau)y(\tau)\:\mathrm{d}\tau + \varphi(t)y(t)\right). \label{eq.7.5}
+\end{align}
+Assume that
+\begin{align}
+    D(t) =  \int_0^t e^{-\alpha(t-\tau)}\varphi(\tau)y(\tau)\:\mathrm{d}\tau \label{eq.7.6}
+\end{align}
+therefore, by marging equations \mref{eq.7.4}{Eq }, \mref{eq.7.5}{Eq } and \mref{eq.7.6}{Eq }
+\begin{align*}
+    \frac{\mathrm{d}\hat{\theta}}{\mathrm{d}t} &= (\alpha P - P\varphi\varphi^TP)D + P(-\alpha D + \varphi y) \\
+    &= P\varphi(y - \varphi^T \underbrace{PD}_{\hat{\theta}})
+\end{align*}
+therefore
+\begin{align}
+    e(t) &= y(t) - \varphi^T(t)\hat{\theta}(t)\\
+    \frac{\mathrm{d}\hat{\theta}}{\mathrm{d}t} &= P(t)\varphi(t)e(t).
+\end{align}
+\end{proof}

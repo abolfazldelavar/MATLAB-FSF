@@ -1,0 +1,37 @@
+\section{Introducing OPP}
+    \subsection{Class}
+
+    \subsection{Object}
+
+\section{Inheritence}
+
+\section{Examples}
+
+In \emref{eq.2}{Eq } if 
+\begin{equation}
+    y(t)=\phi^T(t)\theta(t) + e(t)
+\end{equation}
+such that, $e(t)$ is a white noise with zero mean and variance $\sigma^2$, then
+\begin{align*}
+    \hat{\theta}(i) = \theta + \left(\sum_{j=1}^{i}\varphi(j)\varphi^T(j)\right)^{-1}\left(\sum_{j=1}^{i}\varphi(j)e(j)\right).
+\end{align*}
+therefore, 
+\begin{equation}
+    E\{\hat{\theta}\}=\theta .
+\end{equation}
+On the other hand we know that
+\begin{align}
+    \mathrm{var}(\hat{\theta}) = E\{\hat{\theta}^2\} - E^2\{\hat{\theta}\}.
+\end{align}
+\begin{proof}
+We expand the given equation on both side:
+\begin{align}
+    E\{(\hat{\theta}-\theta)^2\} &= E\{\hat{\theta}^2 + \theta^2 - 2\theta\hat{\theta}\}\\
+    &= E\{\hat{\theta}^2\} + E\{\theta^2\} - 2E\{\theta\hat{\theta}\} \nonumber\\
+    &= \theta^2 + E\{\hat{\theta}^2\} - 2\theta E\{\hat{\theta}\}.\nonumber\\
+    &\nonumber\\
+    bias^2 + var &= (\theta - E\{\hat{\theta}\})^2 + E\{\hat{\theta}^2\} - E^2\{\hat{\theta}\}\\
+    &= \theta^2 + E\{\hat{\theta}^2\} - 2\theta E\{\hat{\theta}\}.\nonumber
+\end{align}
+The both side of equation are equal, so the proof is complete.
+\end{proof}
